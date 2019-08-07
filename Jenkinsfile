@@ -9,7 +9,7 @@ pipeline {
     stage('git') {
       steps {
         dir(path: '/root/projects/test_git') {
-          git(url: 'git@github.com:Justin-jc/test_git.git', branch: 'master', credentialsId: 'login-github')
+          git(url: 'https://github.com/Justin-jc/test_git.git', credentialsId: 'login-github', poll: true)
         }
 
       }
